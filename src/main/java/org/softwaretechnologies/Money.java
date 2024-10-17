@@ -51,9 +51,21 @@ public class Money {
      */
     @Override
     public int hashCode() {
+        BigDecimal scale;
+        int hash;
         if (amount == null) return 10000;
-        else ();
-        if (USD) return
+        else {
+            scale = amount.setScale(4, RoundingMode.HALF_UP);
+            if (MoneyType.USD) return hash = +1;
+            if (MoneyType.EURO) return hash = +2;
+            if (MoneyType.RUB) return hash = +3;
+            if (MoneyType.KRONA) return hash = +4;
+            if (null) return hash = +5;
+        }
+        if (scale >= (Integer.MaxValue - 5)) {
+            hash == Integer.MaxValue;
+            return hash;
+        }
         Random random = new Random();
         return random.nextInt();
     }
@@ -76,11 +88,12 @@ public class Money {
      * @return приведение к строке по указанному формату.
      */
     @Override
-    public String toString() {
-        // TODO: реализуйте вышеуказанную функцию
-        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
-        return str;
-    }
+    public String toString() {    if (type == null && amount == null) {
+        return "null: null";    } else if (type == null) {
+        return "null: " + (amount != null ? amount.setScale(4, RoundingMode.HALF_UP) : "null");    } else if (amount == null) {
+        return type.toString() + ": null";    } else {
+        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();        return str;
+    }}
 
     public BigDecimal getAmount() {
         return amount;
