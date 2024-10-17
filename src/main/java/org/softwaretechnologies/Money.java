@@ -26,8 +26,10 @@ public class Money {
      */
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуйте вышеуказанную функцию
-
+       if ( this == o) return true;
+       if ( o == null || getClass() != o.getClass()) return false;;
+        Money money = (Money) o;
+        return type == money.type && amount.equals(money.amount);
         return false;
     }
 
