@@ -30,7 +30,7 @@ public class Money {
        if ( o == null || getClass() != o.getClass()) return false;;
         Money money = (Money) o;
         return type == money.type && amount.equals(money.amount);
-        return false;
+
     }
 
     /**
