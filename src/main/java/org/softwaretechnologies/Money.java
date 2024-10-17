@@ -51,23 +51,25 @@ public class Money {
      */
     @Override
     public int hashCode() {
-        BigDecimal scale;
-        int hash;
-        if (amount == null) return 10000;
+        int r = Object.hash(amount, type);
+        BigDecimal scale= amount.setScale(4, RoundingMode.HALF_UP);
+        int h;
+        if (amount == null) {
+            r += 10000;
+        } else {
+            r += scale.multiply(BigDecimal.valueOf(10000)).intValue();
+        }
         else {
-            scale = amount.setScale(4, RoundingMode.HALF_UP);
-            if (MoneyType.USD) return hash = +1;
-            if (MoneyType.EURO) return hash = +2;
-            if (MoneyType.RUB) return hash = +3;
-            if (MoneyType.KRONA) return hash = +4;
-            if (null) return hash = +5;
+            if (MoneyType.USD) return h += 1;
+            if (MoneyType.EURO) return h +=2;
+            if (MoneyType.RUB) return h +=3;
+            if (MoneyType.KRONA) return h +=4;
+            if (type == null) return h +=5;
         }
-        if (scale >= (Integer.MaxValue - 5)) {
-            hash == Integer.MaxValue;
-            return hash;
+        if (r >= (Integer.MAX_VALUE - 5)) {
+            return Integer.MAX_VALUE;
         }
-        Random random = new Random();
-        return random.nextInt();
+        else { return r * h; }
     }
 
     /**
@@ -88,11 +90,18 @@ public class Money {
      * @return приведение к строке по указанному формату.
      */
     @Override
-    public String toString() {    if (type == null && amount == null) {
-        return "null: null";    } else if (type == null) {
-        return "null: " + (amount != null ? amount.setScale(4, RoundingMode.HALF_UP) : "null");    } else if (amount == null) {
-        return type.toString() + ": null";    } else {
-        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();        return str;
+    public String toString() {
+        if (type == null && amount == null)
+        { return "null: null"; }
+        else if (type == null) {
+        return "null: " + (amount != null ? amount.setScale(4, RoundingMode.HALF_UP) : "null");
+        }
+    else if (amount == null) {
+        return type.toString() + ": null";
+    }
+    else {
+        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
+        return str;
     }}
 
     public BigDecimal getAmount() {
