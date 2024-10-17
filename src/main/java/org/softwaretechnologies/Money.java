@@ -27,10 +27,11 @@ public class Money {
     @Override
     public boolean equals(Object o) {
        if ( this == o) return true;
-       if ( o == null || getClass() != o.getClass()) return false;;
-        Money money = (Money) o;
-        return type == money.type && amount.equals(money.amount);
-
+       if ( o == null || getClass() != o.getClass()) return false;
+       Money money = (Money) o;
+       BigDecimal s = this.amount.setScale(4, RoundingMode.HALF_UP);
+       BigDecimal s1 = money.amount.setScale(4, RoundingMode.HALF_UP);
+       return s.equals(s1);
     }
 
     /**
@@ -50,9 +51,9 @@ public class Money {
      */
     @Override
     public int hashCode() {
-        // TODO: реализуйте вышеуказанную функцию
-
-
+        if (amount == null) return 10000;
+        else ();
+        if (USD) return
         Random random = new Random();
         return random.nextInt();
     }
