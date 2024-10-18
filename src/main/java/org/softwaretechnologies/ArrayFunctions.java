@@ -35,6 +35,25 @@ public final class ArrayFunctions {
      * @param matrix матрица, в которой столбцы будут заменены на строки.
      */
     public static void rotateMatrix(int[][] matrix) {
-        // TODO: реализуйте вышеуказанную функцию
+        int n = matrix.length;
+        int i = 0;
+        if (n != matrix[0].lenght) {
+            System.out.println("The matrix is not square");
+        }
+        else
+        {
+            while (i*i != (n-1)*(n-1))
+                {
+                    int j = n;
+                    while (j != i)
+                        {
+                            int m = matrix[i][j-1];
+                            matrix[i][j-1] = matrix[j-1][i];
+                            matrix[j-1][i] = m;
+                            j--;
+                        }
+                    i++;
+                }
+        }
     }
 }
