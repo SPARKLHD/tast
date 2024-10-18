@@ -94,7 +94,7 @@ class ElevatorTest {
         assertEquals(-3, elevator.getCurrentFloor());
         elevator.goToExactFloor(-4);
         assertEquals(-3, elevator.getCurrentFloor());
-        String s = "Указан неверный этаж" + System.lineSeparator() + "Указан неверный этаж" + System.lineSeparator();
+        String s = "The wrong floor is specified" + System.lineSeparator() + "The wrong floor is specified" + System.lineSeparator();
         assertEquals(s, outContent.toString());
     }
 }
