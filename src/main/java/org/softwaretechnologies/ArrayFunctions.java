@@ -37,7 +37,7 @@ public final class ArrayFunctions {
     public static void rotateMatrix(int[][] matrix) {
         int n = matrix.length;
         int i = 0;
-        if (n != matrix[0].lenght) {
+        if (n != matrix[0].length) {
             System.out.println("The matrix is not square");
         }
         else
