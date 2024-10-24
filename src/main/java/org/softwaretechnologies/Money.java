@@ -2,6 +2,7 @@ package org.softwaretechnologies;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 import java.util.Random;
 
 import static java.lang.Integer.MAX_VALUE;
@@ -51,21 +52,21 @@ public class Money {
      */
     @Override
     public int hashCode() {
-        int r = Object.hash(amount, type);
+        int r = Objects.hash(amount, type);
         BigDecimal scale= amount.setScale(4, RoundingMode.HALF_UP);
         int h;
+
+        if (type == null){ h = 5;}
+        else if (type.equals("USD")) { h = 1;}
+            else if (type.equals("EURO")) { h = 2; }
+            else if (type.equals("RUB")) { h = 3; }
+            else if (type.equals("KRONA")) { h = 4; }
+            else { h = 5; }
         if (amount == null) {
-            r += 10000;
-        } else {
-            r += scale.multiply(BigDecimal.valueOf(10000)).intValue();
-        }
-        else {
-            if (MoneyType.USD) return h += 1;
-            if (MoneyType.EURO) return h +=2;
-            if (MoneyType.RUB) return h +=3;
-            if (MoneyType.KRONA) return h +=4;
-            if (type == null) return h +=5;
-        }
+        r += 10000;
+    } else {
+        r += scale.multiply(BigDecimal.valueOf(10000)).intValue();
+    }
         if (r >= (Integer.MAX_VALUE - 5)) {
             return Integer.MAX_VALUE;
         }

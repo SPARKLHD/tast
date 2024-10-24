@@ -79,7 +79,20 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.38850576&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.EqualsHashCodeTest.validate">
+  <component name="RunManager" selected="Application.Money">
+    <configuration name="Money" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.softwaretechnologies.Money" />
+      <module name="tast.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softwaretechnologies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EqualsHashCodeTest.validate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -128,6 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Money" />
         <item itemvalue="Gradle.EqualsHashCodeTest.validate" />
         <item itemvalue="Gradle.task_for_softwaretechologies_for_students [build]" />
       </list>
@@ -174,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729148730818</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="emptyProject">
+      <option name="closed" value="true" />
+      <created>1729158314946</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729158314946</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
