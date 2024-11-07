@@ -10,6 +10,7 @@ public class ExceptionTask {
      */
     public static void printMessage() {
         throwRuntimeException();
+
         // TODO: реализуйте вышеуказанную функцию
 
     }
@@ -40,8 +41,7 @@ public class ExceptionTask {
      * @throws DivideOnNullException если divisor равен 0
      */
     public static int divide(int dividend, int divisor) throws DivideOnNullException {
-
-        // TODO: реализуйте вышеуказанную функцию
+        if (divisor == 0) { throw new DivideOnNullException();}
         return dividend/divisor;
     }
 
@@ -56,9 +56,15 @@ public class ExceptionTask {
      */
     public static Optional<String> mergeStrings(String first, String second) {
         // TODO: реализуйте вышеуказанную функцию
-
-
-
-        return Optional.of(first.length() > second.length() ? first + second : second + first);
+        if (first == null) {
+            return Optional.of(String.valueOf(second.length()));
+        }
+        else {
+            return Optional.of(String.valueOf(first.length()));
+        }
+        if (first == null && second == null) { return Optional.ofNullable(null);}
+        else {
+            return Optional.of(first.length() > second.length() ? first + second : second + first);
+        }
     }
 }

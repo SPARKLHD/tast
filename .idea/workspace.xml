@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="631e36af-6f9a-4ffc-a638-cd5c0c305a14" name="Changes" comment="emptyProject">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/DivideOnNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/ExceptionTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/softwaretechnologies/ExceptionTaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/softwaretechnologies/ExceptionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softwaretechnologies/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/ExceptionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/ExceptionTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +21,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -51,7 +48,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="task3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,9 +66,69 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "task5"
+    "git-widget-placeholder": "task5",
+    "last_opened_file_path": "C:/Users/Vera/IdeaProjects/mockito-core-4.8.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.38850576"
   }
 }]]></component>
+  <component name="RunManager" selected="Gradle.ExceptionTaskTest.divide">
+    <configuration name="CompanyTest.getMonthSalaryLeapYear" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.softwaretechnologies.CompanyTest.getMonthSalaryLeapYear&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExceptionTaskTest.divide" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.softwaretechnologies.ExceptionTaskTest.divide&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ExceptionTaskTest.divide" />
+        <item itemvalue="Gradle.CompanyTest.getMonthSalaryLeapYear" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,5 +143,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="emptyProject" />
     <option name="LAST_COMMIT_MESSAGE" value="emptyProject" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/task_for_softwaretechologies_for_students$ArrayFunctionsTest_rotateOddMatrix.ic" NAME="ArrayFunctionsTest.rotateOddMatrix Coverage Results" MODIFIED="1728540978140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/task_for_softwaretechologies_for_students$ArrayFunctionsTest_rotateEvenMatrix.ic" NAME="ArrayFunctionsTest.rotateEvenMatrix Coverage Results" MODIFIED="1728540968886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
