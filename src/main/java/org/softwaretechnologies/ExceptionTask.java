@@ -9,9 +9,9 @@ public class ExceptionTask {
        Вызвана функция printMessage
      */
     public static void printMessage() {
-        throwRuntimeException();
-
-        // TODO: реализуйте вышеуказанную функцию
+        System.out.println("Вызвана функция printMessage");
+//        throwRuntimeException();
+// TODO: реализуйте вышеуказанную функцию
 
     }
 
@@ -21,7 +21,8 @@ public class ExceptionTask {
      Вызвана функция printMessage2
      */
     public static void printMessage2() throws Exception {
-        throwCatchableException();
+        System.out.println("Вызвана функция printMessage2");
+        // throwCatchableException();
         // TODO: реализуйте вышеуказанную функцию
     }
 
@@ -56,13 +57,22 @@ public class ExceptionTask {
      */
     public static Optional<String> mergeStrings(String first, String second) {
         // TODO: реализуйте вышеуказанную функцию
-        if (first == null) {
-            return Optional.of(String.valueOf(second.length()));
+        if(first == null||second == null)
+        {
+            if(first == null&&second == null)
+            {
+                return Optional.ofNullable(null);
+            }
+            else
+            {
+                if (first == null) {
+                    return Optional.of(second);
+                }
+                else{
+                    return Optional.of(first);
+                }
+            }
         }
-        else {
-            return Optional.of(String.valueOf(first.length()));
-        }
-        if (first == null && second == null) { return Optional.ofNullable(null);}
         else {
             return Optional.of(first.length() > second.length() ? first + second : second + first);
         }
