@@ -1,10 +1,24 @@
 package org.softwaretechnologies;
 
-public class MilkCofe  {
-
+public class MilkCofe implements CofeInterface{
     /**
      * Создайте класс MilkCofe, поддерживающий интерфейс CofeIntrface
      * к стоимости базового напитка добавьте 10.
      * к описанию добавьте " + milk"
      */
+    CofeInterface cofeInterface;
+
+    public MilkCofe(CofeInterface cofeInterface) {
+        this.cofeInterface = cofeInterface;
+    }
+
+    @Override
+    public int getCost() {
+        return cofeInterface.getCost()+10;
+    }
+
+    @Override
+    public String description() {
+        return cofeInterface.description()+" + milk";
+    }
 }
